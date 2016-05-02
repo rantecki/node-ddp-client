@@ -1,3 +1,17 @@
+FORKED VERSION
+===============
+
+This repo is a fork of [node-ddp-client](https://github.com/oortcloud/node-ddp-client) with some minor changes.
+
+* If the DDP version negotiated at connection time is greater than `pre1` it will automatically start sending PINGs to the server.
+
+* New optional parameters added to the *opts* parameter of the constructor:
+	* **heartbeatInterval**: Interval in ms. used to send **PING** messages
+	* **heartbeatTimeout**: Timeout for **PONG** reception waiting.
+	* **initialReconnectTimeout**: If the initial connection fails, wait this time before retrying.
+
+**Original README follows...**
+
 Node DDP Client
 ===============
 
